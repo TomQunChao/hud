@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/id_layout_mode" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <AutoCompleteTextView android:id="@+id/text_startkeyword" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:hint="在此输入起点（默认我的位置）"/>
+            <AutoCompleteTextView android:id="@+id/text_dstkeyword" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:hint="在此选择终点"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.6">
+            <RadioGroup android:id="@+id/id_radio_scope" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RadioButton android:id="@+id/id_radio_curloc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:checked="true" android:text="当前位置"/>
+                <RadioButton android:id="@+id/id_radio_wholecountry" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:checked="false" android:text="全国范围"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ListView android:id="@+id/list_point" android:layout_width="match_parent" android:layout_height="match_parent" android:fastScrollAlwaysVisible="false"/>
+    </LinearLayout>
+</LinearLayout>
